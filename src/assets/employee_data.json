@@ -1,0 +1,41 @@
+[
+    {
+        "name": "Anubhav",
+        "salary": 80000,
+        "department": "Technology",
+        "city": "Bijnor",
+        "lastname":"deshwal"
+    },
+
+    {
+        "name": "Pranay",
+        "salary": 80000,
+        "department": "IT",
+        "city": "Delhi",
+        "lastname":"Mahajan"
+    },
+
+    {
+        "name": "Rohit",
+        "salary": 75000,
+        "department": "Sales",
+        "city": "Jaipur",
+        "lastname":"Sharma"
+    },
+
+    {
+        "name": "Hemant",
+        "salary": 82000,
+        "department": "Marketing",
+        "city": "Noida",
+        "lastname":"Sharma"
+    },
+
+    {
+        "name": "Ananya",
+        "salary": 82000,
+        "department": "HR",
+        "city": "Mumbai",
+        "lastname":"Jadons"
+    }
+]

@@ -1,0 +1,99 @@
+<h3 style="text-align: center;">Reactive Driven Form</h3>
+<div class="m-5">
+    <form [formGroup]="form" (ngSubmit)="afterSubmit()">
+        <div class="row mb-4">
+            <label class="col-2 form-label">Name:</label>
+            <div class="col-5">
+                <input type="text" id="name" formControlName="name" placeholder="Enter Name">
+            </div>
+            <div *ngIf="f['name'].invalid && (f['name'].touched || f['name'].dirty)">
+                <div *ngIf="f['name'].errors && f['name'].errors['required']">
+                    Name is required
+                </div>
+
+                <div *ngIf="f['name'].errors && f['name'].errors['minlength']">
+                    Name should be 5 char long
+                </div>
+
+                <div *ngIf="f['name'].errors && f['name'].errors['pattern']">
+                    only alphanumeric character only
+                </div>
+            </div>
+        </div>
+        <div class="row mb-4">
+            <label class="col-2 form-label">Email Address:</label>
+            <div class="col-5">
+                <input type="text" id="email" formControlName="email" placeholder="Enter Email">
+            </div>
+            <div *ngIf="f['email'].invalid && (f['email'].touched || f['email'].dirty)">
+                <div *ngIf="f['email'].errors && f['email'].errors['required']">
+                    Email is required
+                </div>
+
+
+                <div *ngIf="f['email'].errors && f['email'].errors['pattern']">
+                    Not a proper format
+                </div>
+            </div>
+        </div>
+        <div class="row mb-4">
+            <label class="col-2 form-label">Mobile Number:</label>
+            <div class="col-5">
+                <input type="text" id="phone" formControlName="phone" placeholder="Enter Mobile Number" />
+            </div>
+            <div *ngIf="f['phone'].invalid && (f['phone'].touched || f['phone'].dirty)">
+                <div *ngIf="f['phone'].errors && f['phone'].errors['required']">
+                    Number is required
+                </div>
+
+
+                <div *ngIf="f['phone'].errors && f['phone'].errors['pattern']">
+                    Not a proper format
+                </div>
+
+                <div *ngIf="f['phone'].errors && f['phone'].errors['minlength']">
+                    Number Should be 10 num long
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row mb-4">
+            <label class="col-2 form-label">City:</label>
+            <div class="col-5">
+                <input type="text" id="city" formControlName="city" placeholder="Enter City">
+            </div>
+            <div *ngIf="f['city'].invalid && (f['city'].touched || f['city'].dirty)">
+                <div *ngIf="f['city'].errors && f['city'].errors['required']">
+                    Number is required
+                </div>
+
+
+                <div *ngIf="f['city'].errors && f['city'].errors['pattern']">
+                    Not a proper format
+                </div>
+
+
+            </div>
+        </div>
+        <div class="row mb-4">
+            <label class="col-2 form-label">Pincode:</label>
+            <div class="col-5">
+                <input type="text" id="pincode" formControlName="pincode" placeholder="Enter Pin code">
+            </div>
+            <div *ngIf="f['pincode'].invalid && (f['pincode'].touched || f['pincode'].dirty)">
+                <div *ngIf="f['pincode'].errors && f['pincode'].errors['required']">
+                    Number is required
+                </div>
+
+
+                <div *ngIf="f['pincode'].errors && f['pincode'].errors['pattern']">
+                    Not a proper format
+                </div>
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-success" >Submit</button>
+
+    </form>
+</div>
